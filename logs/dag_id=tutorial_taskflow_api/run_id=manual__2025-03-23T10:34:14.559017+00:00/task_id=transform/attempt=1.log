@@ -1,0 +1,28 @@
+[2025-03-23T10:34:20.517+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-23T10:34:20.537+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tutorial_taskflow_api.transform manual__2025-03-23T10:34:14.559017+00:00 [queued]>
+[2025-03-23T10:34:20.544+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tutorial_taskflow_api.transform manual__2025-03-23T10:34:14.559017+00:00 [queued]>
+[2025-03-23T10:34:20.544+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-23T10:34:20.696+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): transform> on 2025-03-23 10:34:14.559017+00:00
+[2025-03-23T10:34:20.702+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=369) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-23T10:34:20.703+0000] {standard_task_runner.py:72} INFO - Started process 371 to run task
+[2025-03-23T10:34:20.704+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tutorial_taskflow_api', 'transform', 'manual__2025-03-23T10:34:14.559017+00:00', '--job-id', '18', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/tutorial_taskflow_api.py', '--cfg-path', '/tmp/tmp866iw0w0']
+[2025-03-23T10:34:20.705+0000] {standard_task_runner.py:105} INFO - Job 18: Subtask transform
+[2025-03-23T10:34:20.744+0000] {task_command.py:467} INFO - Running <TaskInstance: tutorial_taskflow_api.transform manual__2025-03-23T10:34:14.559017+00:00 [running]> on host 41b90dd1aaae
+[2025-03-23T10:34:20.812+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tutorial_taskflow_api' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2025-03-23T10:34:14.559017+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-23T10:34:14.559017+00:00'
+[2025-03-23T10:34:20.814+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-23T10:34:20.814+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-23T10:34:20.814+0000] {logging_mixin.py:190} INFO - Current task name:transform state:running start_date:2025-03-23 10:34:20.537797+00:00
+[2025-03-23T10:34:20.815+0000] {logging_mixin.py:190} INFO - Dag name:tutorial_taskflow_api and current dag run status:running
+[2025-03-23T10:34:20.815+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-23T10:34:20.815+0000] {python.py:240} INFO - Done. Returned value was: {'total_order_value': 1236.7}
+[2025-03-23T10:34:20.837+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-23T10:34:20.837+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=tutorial_taskflow_api, task_id=transform, run_id=manual__2025-03-23T10:34:14.559017+00:00, execution_date=20250323T103414, start_date=20250323T103420, end_date=20250323T103420
+[2025-03-23T10:34:20.856+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-23T10:34:20.856+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-23T10:34:20.856+0000] {logging_mixin.py:190} INFO - Dag name:tutorial_taskflow_api queued_at:2025-03-23 10:34:14.595478+00:00
+[2025-03-23T10:34:20.857+0000] {logging_mixin.py:190} INFO - Task hostname:41b90dd1aaae operator:_PythonDecoratedOperator
+[2025-03-23T10:34:20.886+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-23T10:34:20.905+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-23T10:34:20.907+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
