@@ -1,2 +1,8 @@
-apache-airflow-providers-postgres
+apache-airflow==2.8.2
+apache-airflow-providers-postgres==6.1.1
+apache-airflow-providers-docker==4.2.1
+apache-airflow-providers-common-sql==1.21.0
+psycopg2-binary==2.9.9
+requests==2.31.0
+sqlalchemy==1.4.54
 
