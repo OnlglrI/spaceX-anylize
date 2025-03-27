@@ -1,0 +1,29 @@
+[2025-03-27T12:23:54.543+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-27T12:23:54.562+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: my_dag.add_starlink_to_table manual__2025-03-27T12:23:03.217034+00:00 [queued]>
+[2025-03-27T12:23:54.570+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: my_dag.add_starlink_to_table manual__2025-03-27T12:23:03.217034+00:00 [queued]>
+[2025-03-27T12:23:54.571+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2025-03-27T12:23:54.583+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): add_starlink_to_table> on 2025-03-27 12:23:03.217034+00:00
+[2025-03-27T12:23:54.589+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=715) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-27T12:23:54.591+0000] {standard_task_runner.py:72} INFO - Started process 717 to run task
+[2025-03-27T12:23:54.591+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'my_dag', 'add_starlink_to_table', 'manual__2025-03-27T12:23:03.217034+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/main_dag.py', '--cfg-path', '/tmp/tmpeg_7bw4e']
+[2025-03-27T12:23:54.592+0000] {standard_task_runner.py:105} INFO - Job 86: Subtask add_starlink_to_table
+[2025-03-27T12:23:54.825+0000] {task_command.py:467} INFO - Running <TaskInstance: my_dag.add_starlink_to_table manual__2025-03-27T12:23:03.217034+00:00 [running]> on host 2753c0b03e32
+[2025-03-27T12:23:54.898+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='my_dag' AIRFLOW_CTX_TASK_ID='add_starlink_to_table' AIRFLOW_CTX_EXECUTION_DATE='2025-03-27T12:23:03.217034+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-27T12:23:03.217034+00:00'
+[2025-03-27T12:23:54.898+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-03-27T12:23:54.899+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-03-27T12:23:54.899+0000] {logging_mixin.py:190} INFO - Current task name:add_starlink_to_table state:running start_date:2025-03-27 12:23:54.563136+00:00
+[2025-03-27T12:23:54.899+0000] {logging_mixin.py:190} INFO - Dag name:my_dag and current dag run status:running
+[2025-03-27T12:23:54.900+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-03-27T12:23:54.908+0000] {base.py:84} INFO - Retrieving connection 'postgres_db'
+[2025-03-27T12:24:09.033+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-27T12:24:09.042+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-03-27T12:24:09.043+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=my_dag, task_id=add_starlink_to_table, run_id=manual__2025-03-27T12:23:03.217034+00:00, execution_date=20250327T122303, start_date=20250327T122354, end_date=20250327T122409
+[2025-03-27T12:24:09.063+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-03-27T12:24:09.063+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-03-27T12:24:09.064+0000] {logging_mixin.py:190} INFO - Dag name:my_dag queued_at:2025-03-27 12:23:03.226987+00:00
+[2025-03-27T12:24:09.064+0000] {logging_mixin.py:190} INFO - Task hostname:2753c0b03e32 operator:PythonOperator
+[2025-03-27T12:24:09.080+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-27T12:24:09.093+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-27T12:24:09.095+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
